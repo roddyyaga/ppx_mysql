@@ -55,7 +55,7 @@ let build_param spec opt name =
   | "int64" ->
       Ok ((None, "int64"), ("Ppx_mysql_runtime", "int64_of_string"), ("Int64", "to_string"))
   | "bool" ->
-      Ok ((None, "bool"), ("Ppx_mysql_runtime", "bool_of_string"), ("Stdlib", "string_of_bool"))
+      Ok ((None, "bool"), ("Ppx_mysql_runtime", "bool_of_string"), ("Ppx_mysql_runtime", "string_of_bool"))
   | "string" ->
       Ok ((None, "string"), ("Ppx_mysql_runtime", "string_of_string"), ("Ppx_mysql_runtime", "identity"))
   | module_name when String.length module_name > 0 && module_name.[0] >= 'A' && module_name.[0] <= 'Z' ->

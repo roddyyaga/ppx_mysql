@@ -31,6 +31,11 @@ let bool_of_string str =
   | v -> Ok (v <> 0)
   | exception Failure _ -> Error "cannot parse boolean"
 
+let string_of_bool b =
+  match b with
+  | true -> "1"
+  | false -> "0"
+
 external identity : 'a -> 'a = "%identity"
 
 let deserialize_non_nullable_column idx name of_string func err_accum = function
