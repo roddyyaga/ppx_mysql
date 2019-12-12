@@ -1,3 +1,5 @@
+(* Modifications copyright 2019 Roddy MacSween *)
+
 type deserialization_error = {
   idx : int;
   name : string;
@@ -21,6 +23,8 @@ val int32_of_string : int32 deserializer
 val int64_of_string : int64 deserializer
 
 val bool_of_string : bool deserializer
+
+val string_of_bool : bool -> string
 
 external identity : 'a -> 'a = "%identity"
 
