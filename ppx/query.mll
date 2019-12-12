@@ -1,3 +1,5 @@
+(* Modifications copyright 2019 Roddy MacSween *)
+
 {
 open Ppx_mysql_runtime.Stdlib
 
